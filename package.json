@@ -2,7 +2,8 @@
   "name": "roulettor-server",
   "version": "1.0.0",
   "description": "backend for roulettor",
-  "main": "src/server.ts",
+  "main": "dist/server",
+  "types": "dist/server",
   "scripts": {
     "start": "tsc && node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
