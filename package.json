@@ -5,8 +5,11 @@
   "main": "dist/server",
   "types": "dist/server",
   "scripts": {
-    "start": "tsc && node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/server.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "author": "",
   "license": "ISC",
@@ -26,5 +29,8 @@
     "@types/node": "^20.4.8",
     "prisma": "^4.13.0",
     "typescript": "^5.1.6"
+  },
+  "engines": {
+    "node": "16.17.0"
   }
 }
