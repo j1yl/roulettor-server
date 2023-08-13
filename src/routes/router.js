@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const betController_1 = require("../controllers/betController");
+const userController_1 = require("../controllers/userController");
+const router = (0, express_1.Router)();
+router.post("/api/bet", betController_1.createBet);
+router.get("/api/user/:id", userController_1.getUser);
+router.put("/api/user/:id", userController_1.updateUser);
+router.post("/api/user", userController_1.createUser);
+router.delete("/api/user/:id", userController_1.deleteUser);
+exports.default = router;
